@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: black;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.main__content {
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    padding: 25px;
+    max-width: 100%;
+}
+
+.time {
+    font-size: 8rem;
+}
+
+.date {
+    font-size: 4rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    max-width: 100%;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.js-editable::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+}
+
+.name, .focus {
+  max-width: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    #time {
+        font-size: 6rem;
+    }
+}
+
+.switch-button {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    margin: 10px;
+}
+
+.switch-button:hover {
+    filter: grayscale(.8);
+}
+
+.switch-button:active, .switch-button:focus {
+    outline: 0;
+}
+
+.switch-button:active {
+    transform: scale(1.02);
+}
+
+
+
+
+.weather {
+    position: absolute;
+    width: 220px;
+    top: 25px;
+    left: 25px;
+    padding: 25px;
+    background: #FFFFFF;
+}
+
+.city:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+  }
+
+.weather__icon {
+    font-size: 95px;
+    color: #00b894;
+    margin-top: 10px;
+}
+
+.weather__icon:hover {
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
+.quote {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    padding: 25px;
+    background: #81ecec;
+    max-width: 400px;
+    z-index: 3;
+    width: calc(100% - 40px);
+}
+
+.quote__content {
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .time {
+      font-size: 46px;
+    }
+  
+    .greeting,
+    .name {
+      font-size: 18px;
+    }
+  
+    .weather {
+      width: 200px;
+      padding: 10px;
+    }
+  }

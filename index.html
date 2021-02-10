@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owfont-regular.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Momentum</title>
+</head>
+<body>
+    <div class="background active"></div>
+    <div class="background"></div>
+    <div class="main__content">
+        <time class="time"></time>
+        <div class="date"></div>
+        <h1>
+            <span class="greeting"></span>
+            <span class="name js-editable" data-name="name" data-template="[name]" contenteditable="true"></span>
+        </h1>
+        <h2>What is Your Focus For Today?</h2>
+        <h2 class="focus js-editable" data-name="focus" data-template="[task]" contenteditable="true"></h2>
+    </div>
+
+    <div class="backgroundButton">
+        <button class="switch-button">
+        </button>
+    </div>
+
+    <div class="weather">
+        <span class="city" contenteditable="true">Enter City</span>
+        <div class="weather__wrapper">
+            <div class="weather__temperature"></div>
+            <div class="weather__icon owf"></div>
+            <div class="weather__humidity"></div>
+            <div class="weather__wind-speed"></div>
+        </div>
+
+        <div class="weather__error weather-error-js"></div>
+    </div>
+
+    <div class="quote">
+        <button class="quote__update">
+            Update quote
+        </button>
+        <div class="quote__content">
+            Loading...
+        </div>
+    </div>
+    <script src="solution.js"></script>
+</body>
+</html>
